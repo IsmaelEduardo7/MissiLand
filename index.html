@@ -1,20 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PUCE TEC - MissiLand</title>
+    <title>MissiLand - Nosotros y Catálogo</title>
+    <link rel="icon" type="image/png" href="/imgs/espada.png?v=1">
 
-    <!-- Tailwind CSS desde CDN (Resuelve que todo se vea gigante o roto) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: Geist Pixel (Tu elección) -->
+    <!-- Fuente personalizada Geist Pixel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap" rel="stylesheet">
 
-    <!-- Estilo personalizado para aplicar la fuente e iconos -->
     <style>
         body {
             font-family: 'Geist Pixel', monospace, sans-serif;
@@ -24,56 +24,83 @@
 
 <body class="bg-[#f3effa] min-h-screen text-gray-800">
 
-    <!-- BARRA DE NAVEGACIÓN (Igual al proyector) -->
-    <nav class="bg-white px-8 py-4 flex items-center justify-between shadow-sm">
-        <!-- Logo con texto e icono de espada opcional -->
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="bg-white px-8 py-4 flex items-center justify-between shadow-sm sticky top-0 z-50">
         <div class="flex items-center gap-2">
-            <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13H5.5L12 6.5z"/>
-            </svg>
-            <span class="font-bold text-gray-700 tracking-wide text-lg">PUCE TEC</span>
+            <img src="/imgs/espada.png" alt="Logo MissiLand" class="w-7 h-7 object-contain">
+            <span class="font-bold text-gray-700 tracking-wide text-lg">MissiLand</span>
         </div>
 
-        <!-- Enlaces de Navegación -->
         <div class="flex items-center gap-8 text-sm font-medium text-gray-600">
-            <a href="#" class="hover:text-purple-600 transition-colors">Home</a>
-            <a href="#" class="hover:text-purple-600 transition-colors">Nosotros</a>
-            <a href="#" class="hover:text-purple-600 transition-colors">Catálogo</a>
+            <a href="/index.html" class="hover:text-purple-600 transition-colors">Home</a>
+            <a href="/src/pages/nosotros.html" class="text-purple-600 font-bold">Nosotros</a>
+            <a href="#grid-juegos" class="hover:text-purple-600 transition-colors">Catálogo</a>
             <a href="#" class="hover:text-purple-600 transition-colors">Contáctanos</a>
             <a href="#" class="bg-purple-300 hover:bg-purple-400 text-purple-900 px-4 py-1.5 rounded-full text-xs font-semibold transition-all">Login</a>
         </div>
     </nav>
 
-    <!-- SECCIÓN HERO (Banner Principal) -->
-    <main class="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center justify-between gap-12">
-        
-        <!-- Texto Izquierdo -->
-        <div class="lg:w-1/2 space-y-6">
-            <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
-                Best place to choose <br>
-                your <span class="text-purple-700">games</span>
-            </h1>
+    <!-- SECCIÓN HERO -->
+    <section class="bg-[#f3effa] py-16 px-8 md:px-16 flex items-center justify-center">
+        <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             
-            <p class="text-gray-500 text-sm max-w-md leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porro beatae error laboriosam ab amet sunt recusandae? Reiciendis natus perspiciatis optio.
-            </p>
+            <!-- COLUMNA IZQUIERDA: TEXTOS Y BOTÓN -->
+            <div class="space-y-6 text-left">
+                <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                    Bienvenido a MissiLand
+                </span>
 
-            <button class="bg-[#4c35de] hover:bg-[#3b27be] text-white text-xs font-bold px-6 py-3 rounded-md uppercase tracking-wider shadow-md transition-all">
-                Shop Now
-            </button>
-        </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                    El destino supremo para tu próxima <span class="text-purple-600 underline decoration-purple-400 decoration-wavy">aventura</span>
+                </h1>
 
-        <!-- Imagen Derecha -->
-        <div class="lg:w-1/2 flex justify-center">
-            <div class="w-full max-w-lg overflow-hidden rounded-lg shadow-xl border-4 border-white">
-                <img class="w-full h-[320px] object-cover" 
-                     src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" 
-                     alt="Videojuegos MissiLand">
+                <p class="text-gray-600 text-base sm:text-lg leading-relaxed max-w-lg">
+                    Descubre un universo de coleccionables, títulos épicos y equipamiento gamer. Todo lo que necesitas para llevar tu experiencia de juego al siguiente nivel.
+                </p>
+
+                <div class="pt-2">
+                    <a href="#grid-juegos" class="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-bold px-8 py-3.5 rounded-lg shadow-lg hover:shadow-purple-500/30 transition-all duration-300 transform hover:-translate-y-0.5">
+                        Explorar Catálogo
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
+
+            <!-- COLUMNA DERECHA: IMAGEN CON RESPLANDOR -->
+            <div class="flex justify-center md:justify-end">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+                    
+                    <img 
+                        src="/imgs/missiland.png" 
+                        alt="Colección MissiLand" 
+                        class="relative rounded-2xl shadow-xl w-full max-w-lg object-cover border border-white/40"
+                    >
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE REJILLA DE JUEGOS -->
+    <main class="container mx-auto px-6 pb-20">
+        <div class="mb-10 text-center md:text-left">
+            <h2 class="text-3xl font-extrabold text-gray-900">Catálogo de <span class="text-purple-700">Juegos</span></h2>
+            <p class="text-gray-600 mt-2 max-w-xl">
+                Explora los últimos lanzamientos y mejores títulos disponibles.
+            </p>
         </div>
 
+        <!-- REJILLA OONDE MAIN.JS INYECTA LOS COMPONENTES -->
+        <div id="grid-juegos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
+            <!-- Las tarjetas se renderizan desde main.js -->
+        </div>
     </main>
 
+    <!-- Carga del script principal mediante ruta relativa -->
+    <script type="module" src="../main.js"></script>
 </body>
 
 </html>
